@@ -21,7 +21,6 @@ import com.deloitte.todo.app.repository.*;
 import com.deloitte.todo.app.service.TodoService;
 import com.deloitte.todo.app.util.Util;
 
-
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = { TodoRepository.class, TodoService.class })
 public class TodoControllerTest {
@@ -51,8 +50,6 @@ public class TodoControllerTest {
 		when(repository.save(todo)).thenReturn(todo);
 		assertEquals(todo, todoservice.saveTodo(todo));
 	}
-
-	
 
 	@Test
 	public void updateTodoTest() throws ParseException {

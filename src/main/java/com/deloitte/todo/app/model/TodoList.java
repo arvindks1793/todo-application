@@ -27,8 +27,6 @@ public class TodoList {
 
 	@Column(name = "userName")
 	private String userName;
-	@Column(name = "password")
-	private String password;
 	@Column(name = "description")
 	private String description;
 	@Column(name = "targetDtae")
