@@ -4,36 +4,46 @@
 <meta charset="UTF-8">
 <title>TODO APP</title>
 <style>
-      table {
-        border-collapse: separate;
-        border-spacing: 20px 0;
-      }
-      th,
-      td {
-        width: 150px;
-        text-align: center;
-        padding: 5px;
-      }
-    </style>
+input[type=submit] {
+	border: none;
+	color: black;
+	padding: 10px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+td {
+	width: 70px;
+	text-align: center;
+	padding: 5px;
+}
+
+input[type=submit]:hover {
+  background-color: #C0C0C0;
+  color: black;
+}
+
+</style>
 
 </head>
-<body style="background-color:powderblue;">
+<body style="background-color: powderblue;">
 	<font color="red">${errorMessage}</font>
 	<div align="center">
-  <h1>TODO APP</h1>
-	<form method="post">
-		<table style="with: 80%">
-			<tr>
-				<td>Name</td>
-				<td style="margin-bottom:50px"><input type="text" name="name" required/></td>
-			</tr>
-			<tr>
-				<td>Password</td>
-				<td ><input type="password" name="password" required/></td>
-			</tr>
-		</table><br>
-		<input type="submit" />
-	</form>
+		<h1>TODO APP</h1>
+		<form method="post">
+			<table style="with: 50%">
+				<tr>
+					<td>Name</td>
+					<td><input type="text" name="name" required /></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input type="password" name="password" required /></td>
+				</tr>
+			</table>
+			<br> <input type="submit" />
+		</form>
 	</div>
 </body>
 </html>
