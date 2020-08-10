@@ -3,11 +3,11 @@
  </div>
  <div class="navbar-collapse">
      <ul class="nav navbar-nav">
-          <li><a href="/list-todos">Todos</a></li>
+          <li><a href="/todo-app-0.0.1-SNAPSHOT/list-todos">Todos</a></li>
      </ul>
 
      <ul class="nav navbar-nav navbar-right">
-         <li><a href="/logout">Logout</a></li>
+         <li><a href="/todo-app-0.0.1-SNAPSHOT/logout">Logout</a></li>
      </ul>
  </div>
 </nav>

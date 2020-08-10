@@ -3,7 +3,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 <div class="container">
 	<div>
-		<a type="button" class="btn btn-primary btn-md" href="/add-todo">Add
+		<a type="button" class="btn btn-primary btn-md" href="/todo-app-0.0.1-SNAPSHOT/add-todo">Add
 			Todo</a>
 	</div>
 	<br>
@@ -31,8 +31,8 @@
 									<td><fmt:formatDate value="${todo.targetDate}"
 									pattern="dd/MM/yyyy" /></td>
 							<td><a type="button" class="btn btn-success"
-								href="/update-todo?id=${todo.id}">Update</a> <a type="button"
-								class="btn btn-warning" href="/delete-todo?id=${todo.id}">Delete</a></td>
+								href="/todo-app-0.0.1-SNAPSHOT/update-todo?id=${todo.id}">Update</a> <a type="button"
+								class="btn btn-warning" href="/todo-app-0.0.1-SNAPSHOT/delete-todo?id=${todo.id}">Delete</a></td>
 								<td><input type="checkbox" id="myCheck" onclick = "disable()" ></td>
 						</tr>
 					</c:forEach>
