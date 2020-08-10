@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 
 import com.deloitte.todo.app.model.TodoList;
@@ -14,14 +16,14 @@ import com.deloitte.todo.app.util.Util;
 
 @SpringBootApplication
 @ComponentScan("com.deloitte.todo.app")
-public class TodoApp implements CommandLineRunner {
+public class TodoApp extends SpringBootServletInitializer implements CommandLineRunner {
 
 	@Autowired
 	TodoRepository todoRepo;
 
 	@Autowired
 	UserRepository userRepo;
-	
+
 	// getting the instance of the Util class
 	Util util = Util.getInstance();
 
@@ -57,6 +59,12 @@ public class TodoApp implements CommandLineRunner {
 				util.convertStringToDate("03/06/2020")));
 		todoRepo.save(new TodoList("Erik", "Yoga", util.convertStringToDate("06/06/2020"),
 				util.convertStringToDate("03/06/2020")));
+
+	}
+
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+		return builder.sources(TodoApp.class);
 
 	}
 

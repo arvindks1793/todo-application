@@ -6,6 +6,8 @@
 	<groupId>com.deloitte.todo.app</groupId>
 	<artifactId>todo-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	
 	<name>todo-app</name>
 	<description>An app for tracking todo</description>
 

@@ -47,7 +47,7 @@ public class Util {
 		return date;
 	}
 	
-	//checks if the update date is equal or before the target date
+	//checks if the update date is equal or before the target date	
 	public boolean checkTargetDate(Date targetDate, Date updatedDate) {
 
 		if (updatedDate.equals(targetDate) || (updatedDate.before(targetDate))) {
