@@ -22,6 +22,7 @@ td {
 input[type=submit]:hover {
   background-color: #C0C0C0;
   color: black;
+  
 }
 
 </style>
