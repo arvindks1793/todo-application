@@ -14,6 +14,6 @@ password:mark@123
 Security:
 
 As mentioned in the Write up document the application uses BCrypt hashing technique for security purpose. I wanted to mention few more security oprtions
-which I would have implemented if I had more time. I would have preferred using a Basic authentication or JWT(JSON web tokens) token in this assignment. If the users were logging in real time I would have preferred OAuth 2 (Using Google or GitHub account).
+which I would have implemented if I had more time. I would have preferred using a Basic authentication using Spring Security(eextending the WebsecurityConfigurerAdapter Class) or JWT(JSON web tokens) token in this assignment. If the users were logging in real time I would have preferred OAuth 2 (Using Google or GitHub account).
 
 Please consider this as one the improvements which I missed to mention in my write up. Thank you.
