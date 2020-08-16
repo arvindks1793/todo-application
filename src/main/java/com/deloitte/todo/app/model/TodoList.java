@@ -33,18 +33,30 @@ public class TodoList {
 	private Date targetDate;
 	@Column(name = "updatedDate")
 	private Date updatedDate;
+	@Column
+	private boolean complete;
+
+	
+
+	public boolean isComplete() {
+		return complete;
+	}
+
+	public void setComplete(boolean complete) {
+		this.complete = complete;
+	}
 
 	public TodoList() {
 
 	}
 
-	public TodoList(String userName, String description, Date targetDate, Date updateDate) {
+	public TodoList(String userName, String description, Date targetDate, Date updateDate,boolean complete) {
 
 		this.userName = userName;
 		this.description = description;
 		this.targetDate = targetDate;
 		this.updatedDate = updateDate;
-
+		this.complete = complete;
 	}
 
 	public String getUserName() {

@@ -11,17 +11,25 @@ public class LoginService {
 
 	@Autowired
 	UserRepository userRepo;
-	
-	//authenticate the user using Bcrypt
+
+	// authenticate the user using Bcrypt
 	public boolean validateUser(String name, String password) {
+		String userName = "";
+		String pwd = "";
 
 		try {
 
 			User user = userRepo.findByUserName(name);
 
-			String userName = user.getUserName();
+			if (user != null ){
 
-			String pwd = user.getPassword();
+				userName = user.getUserName();
+
+				pwd = user.getPassword();
+			} else {
+
+				return false;
+			}
 
 			if (name.equals(userName)) {
 

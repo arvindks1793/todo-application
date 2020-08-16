@@ -21,14 +21,14 @@ public class Util {
 
 		return util;
 	}
-	
-	//generating a Bcrypt hashed password for security purposes
-	//the encrypted password will be stored in DB
+
+	// generating a Bcrypt hashed password for security purposes
+	// the encrypted password will be stored in DB
 	public String hashPwd(String pwd) {
 		return BCrypt.hashpw(pwd, BCrypt.gensalt());
 	}
-	
-	//converts a String to Date format
+
+	// converts a String to Date format
 	public Date convertStringToDate(String stringDate) throws ParseException {
 
 		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
@@ -46,8 +46,8 @@ public class Util {
 		}
 		return date;
 	}
-	
-	//checks if the update date is equal or before the target date	
+
+	// checks if the update date is equal or before the target date
 	public boolean checkTargetDate(Date targetDate, Date updatedDate) {
 
 		if (updatedDate.equals(targetDate) || (updatedDate.before(targetDate))) {

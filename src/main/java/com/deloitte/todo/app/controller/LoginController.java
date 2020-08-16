@@ -28,24 +28,17 @@ public class LoginController {
 	public String showHomePage(ModelMap model, @RequestParam String name, @RequestParam String password) {
 
 		try {
-
 			boolean isValidUser = loginService.validateUser(name, password);
-
 			if (!isValidUser) {
-
 				model.put("errorMessage", "Invalid Credentials");
 				return "Login.jsp";
 			}
-
 			model.put("name", name);
 			model.put("password", password);
-
 			return "Home.jsp";
 
 		} catch (Exception e) {
-
 			e.printStackTrace();
-
 			throw e;
 
 		}

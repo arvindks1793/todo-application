@@ -104,9 +104,7 @@ public class TodoController {
 		if (result.hasErrors()) {
 			return "todo";
 		}
-
 		String name = (String) model.get("name");
-		String password = (String) model.get("password");
 		todo.setUserName(name);
 		todoService.saveTodo(todo);
 		return "redirect:/list-todos";

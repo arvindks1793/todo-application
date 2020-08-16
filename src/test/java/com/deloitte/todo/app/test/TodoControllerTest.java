@@ -39,14 +39,14 @@ public class TodoControllerTest {
 	public void getTodobyUserNameTest() throws ParseException {
 		when(repository.findByUserName(name))
 				.thenReturn(Stream.of(new TodoList("Arvind", "Joggin daily", util.convertStringToDate("21/06/2019"),
-						util.convertStringToDate("21/06/2019"))).collect(Collectors.toList()));
+						util.convertStringToDate("21/06/2019"),false)).collect(Collectors.toList()));
 		assertEquals(1, todoservice.findTodoByUserName(name).size());
 	}
 
 	@Test
 	public void saveTodoTest() throws ParseException {
 		TodoList todo = new TodoList("Mark", " walking exercise", util.convertStringToDate("06/06/2020"),
-				util.convertStringToDate("03/06/2020"));
+				util.convertStringToDate("03/06/2020"),false);
 		when(repository.save(todo)).thenReturn(todo);
 		assertEquals(todo, todoservice.saveTodo(todo));
 	}
@@ -55,7 +55,7 @@ public class TodoControllerTest {
 	public void updateTodoTest() throws ParseException {
 
 		TodoList todo = new TodoList("Mark", " walking exercise", util.convertStringToDate("06/06/2020"),
-				util.convertStringToDate("03/06/2020"));
+				util.convertStringToDate("03/06/2020"),false);
 		todoservice.saveTodo(todo);
 		verify(repository, times(1)).save(todo);
 

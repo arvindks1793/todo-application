@@ -42,23 +42,23 @@ public class TodoApp extends SpringBootServletInitializer implements CommandLine
 		userRepo.save(new User("Erik", util.hashPwd("erik@123")));
 
 		todoRepo.save(new TodoList("Arvind", "Joggin daily", util.convertStringToDate("21/06/2019"),
-				util.convertStringToDate("15/06/2019")));
+				util.convertStringToDate("15/06/2019"),false));
 		todoRepo.save(new TodoList("Mark", " walking exercise", util.convertStringToDate("06/06/2020"),
-				util.convertStringToDate("03/06/2020")));
+				util.convertStringToDate("03/06/2020"),false));
 		todoRepo.save(new TodoList("Mark", "Gym", util.convertStringToDate("06/06/2020"),
-				util.convertStringToDate("03/06/2020")));
+				util.convertStringToDate("03/06/2020"),false));
 		todoRepo.save(new TodoList("Rock", "Studying", util.convertStringToDate("06/06/2020"),
-				util.convertStringToDate("03/06/2020")));
+				util.convertStringToDate("03/06/2020"),false));
 		todoRepo.save(new TodoList("Rock", "Meditation", util.convertStringToDate("06/06/2020"),
-				util.convertStringToDate("03/06/2020")));
+				util.convertStringToDate("03/06/2020"),false));
 		todoRepo.save(new TodoList("Eoin", "Swimming", util.convertStringToDate("06/06/2020"),
-				util.convertStringToDate("03/06/2020")));
+				util.convertStringToDate("03/06/2020"),false));
 		todoRepo.save(new TodoList("Eoin", "Practice Programming", util.convertStringToDate("06/06/2020"),
-				util.convertStringToDate("03/06/2020")));
+				util.convertStringToDate("03/06/2020"),false));
 		todoRepo.save(new TodoList("Erik", "Cycling", util.convertStringToDate("06/06/2020"),
-				util.convertStringToDate("03/06/2020")));
+				util.convertStringToDate("03/06/2020"),false));
 		todoRepo.save(new TodoList("Erik", "Yoga", util.convertStringToDate("06/06/2020"),
-				util.convertStringToDate("03/06/2020")));
+				util.convertStringToDate("03/06/2020"),false));
 
 	}
 

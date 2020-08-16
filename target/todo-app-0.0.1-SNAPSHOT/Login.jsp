@@ -29,21 +29,21 @@ input[type=submit]:hover {
 
 </head>
 <body style="background-color: powderblue;">
-	<font color="red">${errorMessage}</font>
+	<font style = "text-align:center;" color="red">${errorMessage}</font>
 	<div align="center">
 		<h1>TODO APP</h1>
 		<form method="post">
 			<table style="with: 50%">
 				<tr>
 					<td>Name</td>
-					<td><input type="text" name="name" required /></td>
+					<td><input type="text" name="name" placeholder = "Username" required /></td>
 				</tr>
 				<tr>
 					<td>Password</td>
-					<td><input type="password" name="password" required /></td>
+					<td><input type="password" name="password" placeholder= "Password" required /></td>
 				</tr>
 			</table>
-			<br> <input type="submit" />
+			<br> <input type="submit" class="btn btn-primary"/>
 		</form>
 	</div>
 </body>
